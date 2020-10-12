@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Pokemon searcher</title>
+  <meta name="description" content="app that calls local server to get api data">
+  <meta name="author" content="Tomas">
+
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script> <!--Para cargar axios-->
+  <script src= "./utils.js"></script>
+</head>
+
+<body style="background-color: rgb(255, 150, 00);">
+    <style>
+        h1 {
+        color: white;
+        text-align: center;
+        font-family:Verdana, Tahoma, sans-serif;
+
+        
+      }
+    </style>
+<style>
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+      transition: 0.3s;
+      width: 40%;
+    }
+    
+    .card:hover {
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    }
+    
+    .container {
+      padding: 2px 16px;
+    }
+    </style>
+
+    <div>
+        <h1>Pokemon search</h1>
+    </div>
+    <div align = "center">
+        <input id="pokemon" type="text">
+        <button id="search" onclick="search_pokemon()">Buscar!</button>
+    </div> 
+    <div class="row row-cols-1  row-cols-sm-2 row-cols-md-3 row-cols-lg-5 pokeList" id="pokemonList"></div>
+</body>
+</html>
